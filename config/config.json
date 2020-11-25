@@ -1,0 +1,4 @@
+{
+    "DB_CONNECTION_STRING" : "postgresql://admin:admin@localhost:5432/address_db?schema=public",
+    "EXPRESS_PORT" : "8000"
+}   

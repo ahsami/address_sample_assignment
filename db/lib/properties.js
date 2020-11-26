@@ -90,7 +90,7 @@ export default class Properties extends Interface {
         }
     }
 
-    async find_in_range(prop) {
+    async find_by_range(prop) {
         const result = await this.prisma.properties.findMany({
             where: {
                 AND: [

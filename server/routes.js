@@ -12,9 +12,7 @@ export default class Router{
         router.post('/select_one',(req,reps)=>{
             //pass req to conotroller
         })
-        router.post('/select_many',(req,resp)=>{
-            //pass req to controller
-        })
+        router.post('/search',resource.search_property)
         router.post('/polygon_search',(req,resp)=>{
             //pass req to conoroller
         })

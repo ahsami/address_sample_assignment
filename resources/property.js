@@ -12,6 +12,7 @@ export default class PropertyResources extends MainResource{
         this.create_property = this.create_property.bind(this)
         this.delete_property = this.delete_property.bind(this)
         this.update_property = this.update_property.bind(this)
+        this.search_property = this.search_property.bind(this)
     }
     async create_property(req, resp) {
         try {
@@ -46,4 +47,16 @@ export default class PropertyResources extends MainResource{
         }
     }
    
+    async search_property(req,resp){
+        try{
+            const {body}  = req
+            const search_prop = {...serach_model,...body}
+            const result = await this.lib.search_properties(search_prop)
+            this.success_respond(result,resp)
+        }
+        catch(ex){
+            this.error_respond(ex,resp)
+        }
+    }
+
 }

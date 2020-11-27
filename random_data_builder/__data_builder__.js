@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 import { properties as model } from '../db/data_models/properties'
 import utils from '../utils/global'
-import cluster, { worker } from 'cluster'
+import cluster from 'cluster'
 import os from 'os'
 import { RANDOM_GENERATOR_LIMIT as limit } from '../config/config.json'
 

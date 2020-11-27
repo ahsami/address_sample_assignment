@@ -15,4 +15,6 @@ model properties {
   rent      Int   @default(0)
   mortgage  Int   @default(0)
   age       Int   @default(0)
+
+  @@unique([latitude, longitude], name: "UIX_Latitude_Longitude")
 }

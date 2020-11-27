@@ -1,5 +1,5 @@
 const properties = {
-    are: undefined,
+    area: undefined,
     latitude: undefined,
     longitude: undefined,
     rent: undefined,

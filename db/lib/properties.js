@@ -2,15 +2,16 @@ import Interface from './IDBPrisma'
 
 export default class Properties extends Interface {
     async add(prop) {
-        try {
-            await this.prisma.properties.create({
+        try {            
+            const added = await this.prisma.properties.create({
                 data: {
                     ...prop
                 }
             })
+            return added
         }
         catch (ex) {
-            console.error(ex)
+            throw ex
         }
     }
 
@@ -24,7 +25,7 @@ export default class Properties extends Interface {
             return result
         }
         catch (ex) {
-            console.error(ex)
+            throw ex
         }
     }
 
@@ -37,13 +38,13 @@ export default class Properties extends Interface {
             })
         }
         catch (ex) {
-            console.error(ex)
+            throw ex
         }
     }
 
     async update({ id, ...prop }) {
         try {
-            await this.prisma.properties.update({
+            const updated = await this.prisma.properties.update({
                 where: {
                     id
                 },
@@ -51,9 +52,10 @@ export default class Properties extends Interface {
                     ...prop
                 }
             })
+            return updated
         }
         catch (ex) {
-            console.error(ex)
+            throw ex
         }
     }
 

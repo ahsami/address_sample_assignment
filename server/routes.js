@@ -1,17 +1,14 @@
 import express from 'express'
-import resources from '../resources'
+import resources from '../resources/property'
 
 
-export default class Router{
+export default class Router{    
     static get_routes(){
         const resource = new resources()
-        const router = express.Router()
-        router.get('/',(req,resp)=>{
-            //pass req to controller
-        })
+        const router = express.Router()        
         router.post('/create',resource.create_property)
-        router.post('/update',resource.update_property)
-        router.post('/remove',resource.delete_property)
+        router.put('/:id/update',resource.update_property)
+        router.delete('/:id/remove',resource.delete_property)
         router.post('/select_one',(req,reps)=>{
             //pass req to conotroller
         })

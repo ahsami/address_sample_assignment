@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon --exec babel-node index.js"
+    "dev": "nodemon --exec babel-node index.js",
+    "data" : "nodemon --exec babel-node random_data_builder/__data_builder__  .js"
   },
   "repository": {
     "type": "git",

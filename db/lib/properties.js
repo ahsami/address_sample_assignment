@@ -1,6 +1,6 @@
-import Interface from './IDBPrisma'
+import DBInterface from './IDBPrisma'
 
-export default class Properties extends Interface {
+export default class Properties extends DBInterface {
     async add(prop) {
         try {            
             const added = await this.prisma.properties.create({

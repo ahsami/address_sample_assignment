@@ -3,7 +3,9 @@ import express from 'express'
 
 export default class Server{
     constructor(port){
-        this.server = express()        
+        this.server = express()    
+        this.server.use(express.json())    
+        this.server.use(express.urlencoded({extended:false}))
         this.port = port        
     }
 

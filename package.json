@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "dev": "nodemon --exec babel-node index.js",
-    "data" : "nodemon --exec babel-node random_data_builder/__data_builder__  .js"
+    "data" : "nodemon --exec babel-node random_data_builder/__data_builder__  .js",
+    "migrate" : "npx prisma migrate save --name init --experimental & npx prisma migrate up --experimental"
   },
   "repository": {
     "type": "git",

@@ -17,9 +17,9 @@ export default class Properties extends DBInterface {
 
     async find_by_id({ id }) {
         try {
-            const result = await this.prisma.properties.findFirst({
+            const result = await this.prisma.properties.findUnique({
                 where: {
-                    id
+                    id:id
                 }
             })
             return result
